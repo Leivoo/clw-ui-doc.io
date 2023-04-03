@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CDynamicSearch 动态搜索组件 | CLW-UI</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.3269121b.css" as="style"><link rel="preload" href="/assets/js/app.ba6c9abb.js" as="script"><link rel="preload" href="/assets/js/2.4ef05571.js" as="script"><link rel="preload" href="/assets/js/11.a9559f13.js" as="script"><link rel="prefetch" href="/assets/js/10.9bff0bd3.js"><link rel="prefetch" href="/assets/js/12.daa6cd2e.js"><link rel="prefetch" href="/assets/js/3.62ac3f90.js"><link rel="prefetch" href="/assets/js/4.31f09a88.js"><link rel="prefetch" href="/assets/js/5.20540d9a.js"><link rel="prefetch" href="/assets/js/6.b6e153eb.js"><link rel="prefetch" href="/assets/js/7.1a25b1a3.js"><link rel="prefetch" href="/assets/js/8.003d31ad.js"><link rel="prefetch" href="/assets/js/9.94f1cf29.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3269121b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CLW-UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/" class="nav-link router-link-active">
+  组件
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/pages/" class="nav-link router-link-active">
+  组件
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/" aria-current="page" class="sidebar-link">使用指南</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基于Elementui的二次开发组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/components/tree-select.html" class="sidebar-link">tree-select 可搜索树形下拉框</a></li><li><a href="/pages/components/search.html" aria-current="page" class="active sidebar-link">search 动态搜索组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/components/c-title.html" class="sidebar-link">title 组件</a></li><li><a href="/pages/components/c-table.html" class="sidebar-link">table 组件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="cdynamicsearch-动态搜索组件"><a href="#cdynamicsearch-动态搜索组件" class="header-anchor">#</a> CDynamicSearch 动态搜索组件</h1> <div class="demo-block demo-en-US demo-search.html" data-v-47d1da0a><div class="demo-content" data-v-47d1da0a><div><CDynamicSearch searchConfig="[object Object],[object Object],[object Object],[object Object],[object Object]"></CDynamicSearch></div></div> <div class="meta" data-v-47d1da0a><!----> <div class="code-content" data-v-47d1da0a><div class="language-html extra-class" data-v-47d1da0a><pre class="language-html" data-v-47d1da0a><code data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token punctuation" data-v-47d1da0a>&lt;</span>template</span><span class="token punctuation" data-v-47d1da0a>&gt;</span></span>
+  <span class="token tag" data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token punctuation" data-v-47d1da0a>&lt;</span>CDynamicSearch</span>
+    <span class="token attr-name" data-v-47d1da0a>:searchConfig</span><span class="token attr-value" data-v-47d1da0a><span class="token punctuation attr-equals" data-v-47d1da0a>=</span><span class="token punctuation" data-v-47d1da0a>&quot;</span>searchConfig<span class="token punctuation" data-v-47d1da0a>&quot;</span></span>
+    <span class="token attr-name" data-v-47d1da0a>:isExpand</span><span class="token attr-value" data-v-47d1da0a><span class="token punctuation attr-equals" data-v-47d1da0a>=</span><span class="token punctuation" data-v-47d1da0a>&quot;</span>false<span class="token punctuation" data-v-47d1da0a>&quot;</span></span>
+    <span class="token attr-name" data-v-47d1da0a>@handleSearch</span><span class="token attr-value" data-v-47d1da0a><span class="token punctuation attr-equals" data-v-47d1da0a>=</span><span class="token punctuation" data-v-47d1da0a>&quot;</span>handleSearch<span class="token punctuation" data-v-47d1da0a>&quot;</span></span>
+  <span class="token punctuation" data-v-47d1da0a>/&gt;</span></span>
+<span class="token tag" data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token punctuation" data-v-47d1da0a>&lt;/</span>template</span><span class="token punctuation" data-v-47d1da0a>&gt;</span></span>
+<span class="token tag" data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token punctuation" data-v-47d1da0a>&lt;</span>script</span><span class="token punctuation" data-v-47d1da0a>&gt;</span></span><span class="token script" data-v-47d1da0a><span class="token language-javascript" data-v-47d1da0a>
+  <span class="token keyword" data-v-47d1da0a>export</span> <span class="token keyword" data-v-47d1da0a>default</span> <span class="token punctuation" data-v-47d1da0a>{</span>
+    <span class="token function" data-v-47d1da0a>data</span><span class="token punctuation" data-v-47d1da0a>(</span><span class="token punctuation" data-v-47d1da0a>)</span> <span class="token punctuation" data-v-47d1da0a>{</span>
+      <span class="token keyword" data-v-47d1da0a>return</span> <span class="token punctuation" data-v-47d1da0a>{</span>
+        <span class="token literal-property property" data-v-47d1da0a>searchConfig</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+          <span class="token punctuation" data-v-47d1da0a>{</span>
+            <span class="token literal-property property" data-v-47d1da0a>label</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;违法行业分类&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>type</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;select&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>val</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;classType&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>data</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>data</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;22443db37d4e4e6b913eb89b701a6d42&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;城际客运&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;fb433b0cfef84127a06731448125d99e&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;城市客运&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;1eb8a12e2d8f43ecbbb72c966aadb13b&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;普通货运&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;5b9f0abac0f14c4ca26e32b4ed71217a&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;危险货运&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;3c50a9f949f24b2995be041f3cc87fad&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;维修管理&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;883b929499e54c0381d34eb22c2d5730&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;车技检测&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;4989c303cd67405d948fded21bb5f5d4&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;驾培管理&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;8c108fdd712349a6966785335274c990&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;站场管理&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;dfd51c6870e644ebb71c625bf710c9d8&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;从业人员&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;9b180061d63e4a9cbbc58566c4c7e261&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;租赁物流&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;369e44c0bcad4d7a8a6b17a0f028d301&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;其它&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;05c9e34e90044ca9bf041a211f209820&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;过期法规&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;45a364368be044c9aed159c4842cba22&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;南京市地方性法规、政府规章&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;9df120a021724b4798336e997ef145a8&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;无锡市地方性法规、政府规章&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;9cea5a2d5a2e4197a9741066b98fa097&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;徐州市地方性法规、政府规章&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;ee8de71843194d7eabc45e08ded477c1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;苏州市地方性法规、政府规章&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;397a7a21aea04e79baefbe6669f8acf7&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;常州市地方性法规、政府规章&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;6a31f126d7ad415a850933678b66276a&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;公路路政&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;0dd807202d1f40b48419f9b08873fed3&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;航道法&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;1ddfb96f0c0c416183a744e9513bba03&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;工程质监&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;69202ae15e8c498da2afc477f2772fe0&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;海事&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;8c5aad740f604201a1ddcc90adb13726&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;港口&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;e074cd5bfa6b4e0e8516d590f2e4d01c&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;大气污染防治&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;fff9af91730f4045bcd1d016ffff9645&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;污染防治（水上）&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;ef643e8a428a46ed82d22be76b1c467c&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;内河交通安全&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;54c00bd2cc1d4dbc9c0ddcbb49e9b1b6&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;危险货物（水上）&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;5be4084031df4fb2b2947795db83c89b&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;超限&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;9480cf3e8ae64cea88cc835da3b1a8a7&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;安全生产&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;4950482a94fc49eb82739c0621e78670&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;一超四罚&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;645ffc6d941a4681a9fd29bd07e1d698&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;违法超限运输&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;基础分类&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;0&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>data</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;b38a4e81122f4234b03c1b539abd4d9a&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;公路路政&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;4166812d242b44dea24afd6e78c40541&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;道路运政&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;e28610d53ce346dbb987b81d8cf39945&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;水路运政&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;da96082985e54a7e8566c79ebce2d2ba&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;内河航道&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;a668094b9480406ebfc7aa2c9c345a13&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;港口&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;b500f7f75edb4ab89c49eeae844bf446&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;地方海事&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;27c562c50d5f47988ea222a6b1a9d407&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;工程质量&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;管理行业分类&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span> <span class="token comment" data-v-47d1da0a>//违法分类</span>
+            <span class="token literal-property property" data-v-47d1da0a>linkage</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;parent&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>{</span>
+            <span class="token literal-property property" data-v-47d1da0a>label</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;违法行为分类&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>type</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;select&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>val</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;classId&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>linkage</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;son&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>{</span>
+            <span class="token literal-property property" data-v-47d1da0a>label</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;是否启用&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>type</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;select&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>val</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;state&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>data</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;0&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;启用&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;停用&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>{</span>
+            <span class="token literal-property property" data-v-47d1da0a>label</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;违法行为&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>type</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;input&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>val</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;illegalName&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>{</span>
+            <span class="token literal-property property" data-v-47d1da0a>label</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;树形下拉框&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>type</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;treeSelect&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>val</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;tree&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;5&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token literal-property property" data-v-47d1da0a>data</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;一级 1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>children</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;2&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;二级 1-1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>children</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                      <span class="token punctuation" data-v-47d1da0a>{</span>
+                        <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;3&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                        <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;三级 1-1-1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                      <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>{</span>
+                <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;4&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;一级 2&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token literal-property property" data-v-47d1da0a>children</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;5&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;二级 2-1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>children</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                      <span class="token punctuation" data-v-47d1da0a>{</span>
+                        <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;6&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                        <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;三级 2-1-1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                      <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>{</span>
+                    <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;7&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;二级 2-2&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token literal-property property" data-v-47d1da0a>children</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>[</span>
+                      <span class="token punctuation" data-v-47d1da0a>{</span>
+                        <span class="token literal-property property" data-v-47d1da0a>id</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;8&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                        <span class="token literal-property property" data-v-47d1da0a>name</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token string" data-v-47d1da0a>&quot;三级 2-2-1&quot;</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                      <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                    <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+                <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+              <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+            <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+          <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+        <span class="token punctuation" data-v-47d1da0a>]</span><span class="token punctuation" data-v-47d1da0a>,</span>
+      <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>;</span>
+    <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+    <span class="token comment" data-v-47d1da0a>// created() {</span>
+    <span class="token comment" data-v-47d1da0a>//   this.init()</span>
+    <span class="token comment" data-v-47d1da0a>// },</span>
+    <span class="token literal-property property" data-v-47d1da0a>methods</span><span class="token operator" data-v-47d1da0a>:</span> <span class="token punctuation" data-v-47d1da0a>{</span>
+      <span class="token function" data-v-47d1da0a>handleSearch</span><span class="token punctuation" data-v-47d1da0a>(</span><span class="token parameter" data-v-47d1da0a>form</span><span class="token punctuation" data-v-47d1da0a>)</span> <span class="token punctuation" data-v-47d1da0a>{</span>
+        console<span class="token punctuation" data-v-47d1da0a>.</span><span class="token function" data-v-47d1da0a>log</span><span class="token punctuation" data-v-47d1da0a>(</span>form<span class="token punctuation" data-v-47d1da0a>)</span><span class="token punctuation" data-v-47d1da0a>;</span>
+      <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+    <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>,</span>
+  <span class="token punctuation" data-v-47d1da0a>}</span><span class="token punctuation" data-v-47d1da0a>;</span>
+</span></span><span class="token tag" data-v-47d1da0a><span class="token tag" data-v-47d1da0a><span class="token punctuation" data-v-47d1da0a>&lt;/</span>script</span><span class="token punctuation" data-v-47d1da0a>&gt;</span></span>
+</code></pre></div></div></div> <div class="demo-block-control" style="width:unset;" data-v-47d1da0a><i class="caret-bottom icon" data-v-47d1da0a data-v-47d1da0a></i> <span style="display:none;" data-v-47d1da0a data-v-47d1da0a>Expand</span> <span class="copy-action" style="display:;" data-v-47d1da0a>Copy</span> <span class="copy-action copy-action-success" style="display:none;" data-v-47d1da0a data-v-47d1da0a>Copy</span></div></div><h3 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h3> <div class="special_table"><table><thead><tr><th style="text-align:center;">属性名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">默认值</th> <th style="text-align:center;">说明</th></tr></thead> <tbody><tr><td style="text-align:center;">searchConfig</td> <td style="text-align:center;">Array</td> <td style="text-align:center;">[Object,Object...] (obj 详细字段见下方)</td> <td style="text-align:center;">动态搜索框默认值</td></tr> <tr><td style="text-align:center;">isExpand</td> <td style="text-align:center;">Boolean</td> <td style="text-align:center;">false</td> <td style="text-align:center;">动态搜索框默认是否展开</td></tr></tbody></table></div> <h3 id="searchconfig"><a href="#searchconfig" class="header-anchor">#</a> SearchConfig</h3> <div class="special_table"><table><thead><tr><th style="text-align:center;">属性名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">说明</th></tr></thead> <tbody><tr><td style="text-align:center;">label</td> <td style="text-align:center;">string</td> <td style="text-align:center;">单个搜索项的 label 名称</td></tr> <tr><td style="text-align:center;">type</td> <td style="text-align:center;">string</td> <td style="text-align:center;">搜索项的显示类型（input-输入框，select-下拉框，treeSelect-树形下拉框，）</td></tr> <tr><td style="text-align:center;">val</td> <td style="text-align:center;">string</td> <td style="text-align:center;">与后端约定的对应每个搜索项应该返回的表单 key 值</td></tr> <tr><td style="text-align:center;">name</td> <td style="text-align:center;">string</td> <td style="text-align:center;">搜索项的双向绑定值，若有回显需要则在此处赋值</td></tr> <tr><td style="text-align:center;">data</td> <td style="text-align:center;">array</td> <td style="text-align:center;">此项适用于 select 或者 treeselect 类型的搜索项（select-对应的 select 的数据格式-----传入的格式应为{id:&quot;&quot;,name:&quot;&quot;}，treeselect-对应的树形数据格式）</td></tr> <tr><td style="text-align:center;">linkage</td> <td style="text-align:center;">string</td> <td style="text-align:center;">该版本现支持两个 select 搜索框的联动操作，主动方应赋值为 parent，被动方应赋值为 son</td></tr></tbody></table></div> <h3 id="事件"><a href="#事件" class="header-anchor">#</a> 事件</h3> <div class="special_table"><table><thead><tr><th style="text-align:center;">事件名称</th> <th style="text-align:center;">说明</th> <th style="text-align:center;">参数</th></tr></thead> <tbody><tr><td style="text-align:center;">handleSearch</td> <td style="text-align:center;">-</td> <td style="text-align:center;">返回一个完整的搜索项值表单</td></tr> <tr><td style="text-align:center;">handleRefresh</td> <td style="text-align:center;">-</td> <td style="text-align:center;">清空搜索项值</td></tr></tbody></table></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/components/tree-select.html" class="prev">
+        tree-select 可搜索树形下拉框
+      </a></span> <span class="next"><a href="/pages/components/c-title.html">
+        title 组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ba6c9abb.js" defer></script><script src="/assets/js/2.4ef05571.js" defer></script><script src="/assets/js/11.a9559f13.js" defer></script>
+  </body>
+</html>
